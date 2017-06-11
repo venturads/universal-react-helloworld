@@ -14,7 +14,7 @@ export default class SimpleCounter extends React.Component {
 
   render() {
     return (
-      <button onClick={this.incrementCount.bind(this)}>
+      <button className="btn btn-default" onClick={this.incrementCount.bind(this)}>
         Count: {this.state.count}
       </button>
     );
