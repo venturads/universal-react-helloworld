@@ -11,6 +11,7 @@ app.set('view engine', 'ejs');
 // Serve static files from the 'public' folder
 app.use(express.static('public'));
 
+var port = process.env.PORT || 8080;
 // GET /
 app.get('/', function (req, res) {
   res.render('layout', {
@@ -19,7 +20,7 @@ app.get('/', function (req, res) {
 });
 
 // Start server
-let server = app.listen(8080, function () {
+let server = app.listen(port, function () {
   let host = server.address().address;
   let port = server.address().port;
 
